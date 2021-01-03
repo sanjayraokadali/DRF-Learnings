@@ -39,6 +39,6 @@ class ArticleSerializer(serializers.Serializer):
 
     def validate_title(self,value):
 
-        if len(value) < 60:
+        if len(value) < 10:
             raise serializers.ValidationError('Must be more than 60 in length!')
         return value
