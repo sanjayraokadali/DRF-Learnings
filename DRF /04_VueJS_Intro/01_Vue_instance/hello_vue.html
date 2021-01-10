@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Hello Vue</title>
+  </head>
+  <body>
+
+    <div class="app">
+      {{ message }}
+      <h4> {{ value / 50 }} </h4>
+
+      <h2> {{  "Hello " +  "Sanjay!" }}</h2>
+      <p>{{  "3+2 is: " + value }}</p>
+      <p> {{ Math.random() }} </p>
+      <p> {{ Math.random() }} </p>
+      <p> {{ message.split(' ').reverse().join(' ') }}</p>
+      <a v-bind:href="link">Link to Google</a>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>

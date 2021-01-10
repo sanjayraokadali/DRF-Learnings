@@ -37,18 +37,11 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'django.contrib.sites',
     'profiles',
     'api',
 
-    'allauth',
-    'allauth.account',
-    'allauth.socialaccount',
-
     'rest_framework',
     'rest_framework.authtoken',
-    'rest_auth.registration',
-    'rest_auth',
 ]
 
 MIDDLEWARE = [
@@ -133,7 +126,7 @@ STATIC_URL = '/static/'
 
 
 MEDIA_URL='/media/'
-MEDIA_ROOT = 'uploads'
+MEDIA_ROOT = "upload"
 
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': [
@@ -141,8 +134,3 @@ REST_FRAMEWORK = {
         'rest_framework.authentication.SessionAuthentication',
     ]
 }
-
-SITE_ID = 1
-
-ACCOUNT_EMAIL_VERIFICATION = 'none'
-ACCOUNT_EMAIL_REQUIRED = (True)

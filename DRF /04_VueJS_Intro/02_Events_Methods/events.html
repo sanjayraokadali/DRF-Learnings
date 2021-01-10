@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+
+  <style media="screen">
+    .overthegreen{
+      background-color: green;
+      width: 350px;
+      height: 350px;
+    }
+  </style>
+  <body>
+
+    <div class="app">
+      <h2 style=" opacity: 0.6; color: brown;" > <strong> {{ message }} </strong> </h2>
+      <h3> <a v-bind:href="link"> Google! </a> </h3>
+      <h2>{{ packets }}</h2>
+      <button v-on:click="onplus"> Add Packet</button>
+      <br><br>
+      <button v-on:click="onminus"> Remove Packet</button>
+    </div>
+
+    <div class="box">
+
+      <h2>{{ box }}</h2>
+
+      <button v-on:click='addbox' type="button" name="button">Even or Odd?</button>
+
+    </div>
+      <br><br>
+
+    <div class="overthegreen" @mouseover='overthegreen'>
+
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+    <script src="main.js" charset="utf-8"></script>
+  </body>
+</html>
