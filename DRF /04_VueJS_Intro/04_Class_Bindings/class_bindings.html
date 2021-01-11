@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Class Bindings</title>
+  </head>
+  <style media="screen">
+    .square{
+      width: 400px;
+      height: 400px;
+      opacity:0.3;
+    }
+    .circle{
+      width: 400px;
+      height: 400px;
+      border-radius: 200px;
+      opacity:0.6;
+    }
+  </style>
+  <body>
+
+    <div class="app">
+
+      <div v-bind:class="{ square: flag, circle:!flag }"
+           v-bind:style="styleSquare">
+
+      </div>
+
+      <div>
+        <button @click="changeColor" type="button">Change Color</button>
+      </div>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+    <script src="main.js" charset="utf-8"></script>
+  </body>
+</html>

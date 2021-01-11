@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Conditional Rendering</title>
+  </head>
+  <body>
+
+    <div class="app">
+
+      <div v-if='sale && quant >=50'>
+
+        <h3>Product Name: {{ product }}</h3>
+        <h3>Quantity: {{ quant }}</h3>
+        <h2>For Sale</h2>
+
+      </div>
+
+      <div v-else-if="sale &&  quant<= 20">
+        <h3>Product Name: {{ product }}</h3>
+        <h3>Quantity: {{ quant }}</h3>
+        <h3>Not For Sale!</h3>
+      </div>
+
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+    <script src="main.js" charset="utf-8"></script>
+  </body>
+</html>
