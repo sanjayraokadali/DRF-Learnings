@@ -126,7 +126,7 @@ STATIC_URL = '/static/'
 
 
 MEDIA_URL='/media/'
-MEDIA_ROOT = "upload"
+MEDIA_ROOT = "uploads"
 
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': [
