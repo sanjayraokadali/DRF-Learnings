@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Forms and User Inputs</title>
+  </head>
+  <style media="screen">
+
+  </style>
+  <body>
+
+    <div class="app" >
+
+    <h4>Message : {{ text }}</h4>
+
+    <hr>
+    <h4>Write A message: </h4><br>
+    <input type="text" v-model="text" placeholder="Type Here!">
+    <hr>
+
+    <input type="checkbox" v-model="checker" >
+    <label for="checkbox">Value {{ checker }}</label>
+    <hr>
+    <br>
+    <label for="">Select City:</label>
+    <select class="" name="" v-model="city">
+      <option value="Delhi">Delhi</option>
+      <option value="Bangalore">Bangalore</option>
+
+    </select>
+
+    <p> {{ city }}</p>
+
+
+    <form @submit.prevent="onSubmit" >
+
+      <textarea name="comments" rows="8" cols="80" v-model="comment" placeholder="type here!" ></textarea>
+
+      <input type="submit" name="" value="Add Comment">
+    </form>
+
+    <div>
+
+      <ul v-for="comment in comments" >
+        <li> {{ comment }}</li>
+      </ul>
+
+    </div>
+
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+    <script src="main.js" charset="utf-8"></script>
+  </body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <title>Task Assessment</title>
+  </head>
+  <body>
+
+    <div class="container">
+      <h1>Task Assessment</h1>
+
+      <div class="app">
+
+        <h4>Task Count: {{ task_count }} </h4>
+
+        <br>
+
+        <input type="text" @keyup.enter="addTask" style=" width:1000px; "  v-model="task" name="" placeholder="Enter your task here!">
+
+        <br><br>
+
+        <div class="jumbotron" style="opacity:0.6" >
+
+          <h5 v-if='task_count == 0'> [EMPTY LIST].. Please Enter your tasks!</h5>
+          <div v-else class="alert alert-success alert-dismissible fade show" v-for="item in tasks">
+            <strong>{{ item }}</strong>
+            <button @click="removeTask" type="button" class="close" data-dismiss="alert" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+    <script src="main.js" charset="utf-8"></script>
+  </body>
+</html>
