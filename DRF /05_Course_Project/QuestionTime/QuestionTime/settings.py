@@ -55,6 +55,8 @@ INSTALLED_APPS = [
     'rest_auth.registration',
 
     'crispy_forms',
+
+    'webpack_loader',
 ]
 
 MIDDLEWARE = [
@@ -146,7 +148,9 @@ REST_FRAMEWORK = {
     ],
     'DEFAULT_PERMISSION_CLASSES': [
         'rest_framework.permissions.IsAuthenticated',
-    ]
+    ],
+    'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
+    'PAGE_SIZE': 2
 }
 
 
@@ -160,3 +164,11 @@ SITE_ID = 1
 
 ACCOUNT_EMAIL_VERIFICATION = 'none'
 ACCOUNT_EMAIL_REQUIRED = (True)
+
+WEBPACK_LOADER = {
+
+    'DEFAULT':  {
+        'BUNDLE_DIR_NAME':'dist/',
+        'STATS_FILE': os.path.join(BASE_DIR, 'frontend', 'webpack-stats.json')
+    }
+}
