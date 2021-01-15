@@ -1,14 +1,8 @@
-<!DOCTYPE html>
+{% extends "base.html" %}
 {% load render_bundle from webpack_loader %}
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>Index Page</title>
-  </head>
-  <body>
 
-    <h3>Vus JS</h3>
 
+{% block bodyblock %}
 
       <div id="app">
       </div>
@@ -18,5 +12,4 @@
 
     {% render_bundle 'app' %}
 
-  </body>
-</html>
+{% endblock %}

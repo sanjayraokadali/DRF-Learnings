@@ -1,8 +1,10 @@
 <template>
   <div class="home">
+    <div class="container">
     <img alt="Vue logo" src="../assets/logo.png" />
-    <HelloWorld msg="Welcome to Vue JS" />
+    <HelloWorld msg="Quetion Time Index Page view!" />
   </div>
+</div>
 </template>
 
 <script>
@@ -15,4 +17,5 @@ export default {
     HelloWorld
   }
 };
+
 </script>
