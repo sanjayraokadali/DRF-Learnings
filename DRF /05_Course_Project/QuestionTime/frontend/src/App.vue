@@ -7,16 +7,14 @@
 
 
 <script>
-  import navbar from "@/components/NavBar.vue"
+  import navbar from "@/components/NavBar"
   export default {
     name: "App",
       components: {
         navbar
-
       }
     }
 </script>
-
 
 <style>
 </style>
